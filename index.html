@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wahiduzzaman's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>khandakar Wahiduzzaman</h1>
+      <ul class="nav-links">
+        <li><a href="#about" class="button">About</a></li>
+        <li><a href="#projects" class="button">Projects</a></li>
+        <li><a href="#resume" class="button">Resume</a></li>
+        <li><a href="#contact" class="button">Contact</a></li>
+        <li><a href="travel.html" class="button">Travel</a></li>
+        <li><a href="food.html" class="button">Food</a></li>
+        <li><a href="blog.html" class="button">Blog</a></li>
+      </ul>
+      <button id="darkModeToggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+
+    <div class="about-container">
+      <img src="assets/khandakar.jpg" alt="My pic" class="profile-pic" data-aos="fade-right">
+      <div class="about-text" data-aos="fade-left">
+        <h3>Hi, I'm Khandakar Wahiduzzaman</h3>
+        <p>I'm a Computer Science senior at Hunter College, NYC, with a passion for AI, Data, software, and full-stack development.
+          I love building innovative solutions that make a difference. Let's connect and create something amazing together!
+          If you are interested in any of my projects or have any questions, feel free to reach out to me via email or connect with me on LinkedIn.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-right">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project" onclick="openModal('modal1')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>FabricAI app</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <h2>FabricAI app</h2>
+          <p>●  Developed a mobile-first AI app to predict fabric type from images using a PyTorch EfficientNetB0 model</p>
+          <p>●  Provide real-time predictions, trained on FABRIC dataset, optimized for mobile(40% faster, 95% prediction accuracy)</p>
+          <p>●  Features include real-time camera detection, shopping & eco-friendly suggestions, and multilingual support</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal2')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Location-Based Alarm app</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <h2>Location-Based Alarm app</h2>
+          <p>●  Developed a cross-platform map-based alarm app using Flutter, allowing users to set location-based alerts and receive real-time notifications when approaching their selected destination</p>
+          <p>●  Implemented Google Maps SDK and background location services to create a robust geofencing system. Optimized for performance and battery efficiency on both Android and iOS</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal3')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>AI Stock Predictor</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <h2>AI Stock Predictor</h2>
+          <p>●  Built a full-stack AI-powered stock prediction web app using Flask, React, PyTorch, and scikit-learn on Yahoo Finance time-series data</p>
+          <p>●  Engineered RESTful APIs for real-time stock data retrieval and user requests(chart toggling, Confidence Interval)</p>
+          <p>●  Designed a responsive UI and scalable backend, laying the groundwork for push notifications & an AI-powered Chatbot</p>
+          <p>●  Engineered real-time data pipeline with Kafka(streaming data ingestion), feature extraction, news sentiment analysis(80% reduced data latency)</p>
+          <p>●  Developed a dashboard with charts, newsfeed, AI-Chatbot, data processing & model updates orchestrated by Airflow</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal4')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>License	Plate	Recognition</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal4')">&times;</span>
+          <h2>License Plate Recognition</h2>
+          <p>●  Developed a real-time license plate recognition system using YOLOv4 and TensorFlow OCR, achieving 98%+ accuracy</p>
+          <p>●  Enhanced recognition by replacing Tesseract with a TensorFlow CRNN for better accuracy and distorted plates</p>
+          <p>●  Optimized model for smart city deployment using TensorFlow Lite for fast & efficient inference on mobile deployment</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal5')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>CUNY Career Link</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal5')">&times;</span>
+          <h2>CUNY Career Link</h2>
+          <p>●  A proposed full-stack career portal designed to centralize exclusive referrals directly from all 25 CUNY counselors</p>
+          <p>●  Designed role-based authentication and user interfaces for students and counselors using React, Node.js, and Tailwind CSS, with RESTful APIs  allowing counselors to post  opportunities and students to explore and filter relevant listings</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal6')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Multi-Model NoSQL Query Engine</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal6')">&times;</span>
+          <h2>Multi-Model NoSQL Query Engine</h2>
+          <p>●  Optimized MongoDB queries for efficient document storage & retrieval, integrating Neo4j for graphing relationships</p>
+          <p>●  Designed GUI & CLI interfaces to enhance accessibility & optimized queries(reduce retrieval time by 50%)</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal7')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Drug-Gene-Disease Relationship Analysis with PySpark & Hadoop(Hetionet)</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal7" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal7')">&times;</span>
+          <h2>Drug-Gene-Disease Relationship Analysis with PySpark & Hadoop(Hetionet)</h2>
+          <p>●  Built a scalable data processing pipeline using PySpark, enabling efficient distributed computing</p>
+          <p>●  Integrated the solution with Hadoop for large-scale data storage and processing</p>
+          <p>●  Conducted performance tuning to optimize data transformations and reduce processing time by 30%</p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal8')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Job Assistant</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal8" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal8')">&times;</span>
+          <h2>Job Assistant</h2>
+          <p>●  Created a Job Assistant that scraps jobs from the websites based on job-roles and locations</p>
+          <p></p>
+          <p></p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal9')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Mimic CPU(Rust)</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal9" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal9')">&times;</span>
+          <h2>Mimic CPU(Rust)</h2>
+          <p></p>
+          <p></p>
+          <p></p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+
+      <div class="project" onclick="openModal('modal10')" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Reject Me If You Can(Web Game & Python-app Game)</h3>
+        <p>Click to see details</p>
+      </div>
+      <!-- Modal -->
+      <div id="modal10" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal10')">&times;</span>
+          <h2>Reject Me If You Can(Web Game & Python-app Game)</h2>
+          <p></p>
+          <p></p>
+          <p></p>
+          <!--
+          <a href="https://github.com/yourgithub/license-plate" target="_blank">GitHub</a> |
+          <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+          -->
+        </div>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <!-- 👀 ⬇️ -->
+  <section id="resume" data-aos="fade-right">
+    <h2>Resume</h2>
+
+    <!-- Data Science Resume -->
+    <h3>Resume(Data Science/Engineering)</h3>
+    <div class="resume-links" data-aos="zoom-in">
+      <a href="assets/Data-Khandakar Wahiduzzaman Resume.docx - Google Docs.pdf" target="_blank">View Resume</a>
+      <a href="assets/Data-Khandakar Wahiduzzaman Resume.docx - Google Docs.pdf" download>Download Resume</a>
+    </div>
+
+    <!-- Software Engineering Resume -->
+    <h3>Resume(Software Engineering)</h3>
+    <div class="resume-links" data-aos="zoom-in">
+      <a href="assets/SWE-Khandakar Wahiduzzaman Resume.docx - Google Docs.pdf" target="_blank">View Resume</a>
+      <a href="assets/SWE-Khandakar Wahiduzzaman Resume.docx - Google Docs.pdf" download>Download Resume</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-right">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kwrafi99@gmail.com">kwrafi99@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/khandakar-wahiduzzaman-3549a91ab/" target="_blank">https://www.linkedin.com/in/khandakar-wahiduzzaman-3549a91ab/</a></p>
+    <p>GitHub: <a href="https://github.com/KhandakarWahiduzzaman" target="_blank">https://github.com/KhandakarWahiduzzaman</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Khandakar Wahiduzzaman</p>
+  </footer>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="scripts.js"></script>
+<script> AOS.init(); </script>
+</body>
+</html>

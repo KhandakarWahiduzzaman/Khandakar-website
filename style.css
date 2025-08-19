@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button#darkModeToggle {
+  background: none;
+  color: inherit;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#darkModeToggle:hover {
+  padding: 5px 15px;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .modal-content {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+body.dark-mode .project {
+  background: #2c2c2c;
+  border-left-color: #007bff;
+}
+
+body.dark-mode .project:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode a {
+  color: #66ccff;
+}
+
+body.dark-mode button#darkModeToggle {
+  color: #66ccff;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 1em 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links .button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.nav-links .button:hover {
+  background-color: transparent;
+  color: #007bff;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  font-size: 1.1em;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #007bff;
+  border-radius: 4px;
+}
+
+.project:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is above other content */
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  border: 3px solid #007bff;
+  position: relative;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.resume-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;              /* Adds space between buttons */
+  margin-top: 15px;
+}
+
+.resume-links a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 150px;       /* Makes buttons consistent in size */
+}
+
+.resume-links a:hover {
+  background-color: #0056b3;
+  padding: 10px 25px;
+}
+
+/* Dark mode compatibility */
+body.dark-mode .resume-links a {
+  background-color: #66ccff;
+  color: #000;
+}
+
+body.dark-mode .resume-links a:hover {
+  background-color: #4bb8e9;
+}
+
+.contact a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #0056b3;
+  padding: 5px 10px;
+}
+
+/* Buttons stack on smaller screens */
+@media (max-width: 500px) {
+  .resume-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
